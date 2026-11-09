@@ -39,30 +39,3 @@ trên cùng dữ liệu; với bài học có bản tự cài đặt, kết qu�
 | 33 | `classification_evaluation` | Confusion, precision, recall, F1, ROC AUC |
 | 34 | `id3` | Cây phân lớp ID3 và tham chiếu CART |
 
-Các bài giới thiệu hoặc thuần lý thuyết 1–2, 11, 16, 18, 30–31 không có
-script. Bài 14 và 35–37 dành cho repo Deep Learning. Mỗi thư mục `src/<problem>/`
-có README riêng về shape dữ liệu và phép tính chính. Bản framework chỉ dùng
-framework ở những bài blog không tự cài đặt mô hình.
-
-## Linear regression
-
-```bash
-uv run python -m data.script.linear_regression.generate
-uv run python -m src.linear_regression.run
-```
-
-Terminal chỉ hiển thị các bước đang chạy hoặc đã hoàn thành. Kết quả của bản
-Manual và scikit-learn được ghi vào `outputs/linear_regression/results.txt` với
-8 chữ số thập phân cho trọng số và MSE. Bài này không tạo ảnh; công cụ vẽ dùng
-chung vẫn nằm ở `src/tools/plotting.py` cho các bài sau. `outputs/` và dữ liệu
-sinh ra được Git bỏ qua.
-
-Logger dùng chung cho các bài toán nằm ở `src/tools/logger.py`: gọi
-`configure_logger(path_to_results_txt)` một lần, dùng `logger.info()` cho tiến
-trình và `logger.log("RESULT", ...)` cho kết quả.
-
-Kiểm tra các hành vi quan trọng bằng:
-
-```bash
-uv run python -m unittest discover -s tests -v
-```

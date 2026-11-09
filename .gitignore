@@ -14,3 +14,5 @@ data/generated_data/
 
 # Generated plots and other outputs
 outputs/
+
+AGENTS.md
